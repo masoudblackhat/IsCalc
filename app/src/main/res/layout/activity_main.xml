@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             android:background="#4d4d4d"
+                                             tools:context="ir.sarinapp.islandroid_calc.MainActivity"
+                                             tools:layout_editor_absoluteX="0dp"
+                                             tools:layout_editor_absoluteY="25dp">
+
+  <TextView
+    android:id="@+id/txt_zero"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:background="@color/lightGrey"
+    android:gravity="center"
+    android:onClick="onClick"
+    android:padding="20dp"
+    android:tag="0"
+    android:text="@string/zero"
+    android:textSize="24sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintHorizontal_weight="1"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toLeftOf="@+id/txt_double_zero"/>
+
+  <TextView
+    android:id="@+id/txt_double_zero"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:background="@color/medianGrey"
+    android:gravity="center"
+    android:padding="20dp"
+    android:text="@string/double_zero"
+    android:textSize="24sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintHorizontal_weight="1"
+    app:layout_constraintLeft_toRightOf="@+id/txt_zero"
+    app:layout_constraintRight_toLeftOf="@+id/txt_dot" />
+
+  <TextView
+    android:id="@+id/txt_dot"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:background="@color/medianGrey"
+    android:gravity="center"
+    android:padding="20dp"
+    android:text="@string/dot"
+    android:textSize="24sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintHorizontal_weight="1"
+    app:layout_constraintLeft_toRightOf="@+id/txt_double_zero"
+    app:layout_constraintRight_toLeftOf="@+id/txt_equal" />
+
+  <TextView
+    android:id="@+id/txt_equal"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:background="@color/darkOrange"
+    android:gravity="center"
+    android:padding="20dp"
+    android:text="@string/equal"
+    android:textColor="@color/colorWhite"
+    android:textSize="24sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintHorizontal_weight="1"
+    app:layout_constraintLeft_toRightOf="@+id/txt_dot"
+    app:layout_constraintRight_toRightOf="parent" />
+
+  <TextView
+    android:id="@+id/txt_one"
+    style="@style/CalcButton"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:background="@color/lightGrey"
+    android:onClick="onClick"
+    android:tag="1"
+    android:text="@string/one"
+    app:layout_constraintBottom_toTopOf="@+id/txt_zero"
+    app:layout_constraintHorizontal_weight="1"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toLeftOf="@+id/txt_two"/>
+
+  <TextView
+    android:id="@+id/txt_two"
+    style="@style/CalcButton"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:background="@color/lightGrey"
+    android:onClick="onClick"
+    android:tag="2"
+    android:text="@string/two"
+    app:layout_constraintBottom_toBottomOf="@+id/txt_one"
+    app:layout_constraintHorizontal_weight="1"
+    app:layout_constraintLeft_toRightOf="@+id/txt_one"
+    app:layout_constraintRight_toLeftOf="@+id/txt_three"/>
+
+  <TextView
+    android:id="@+id/txt_three"
+    style="@style/CalcButton"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:background="@color/lightGrey"
+    android:onClick="onClick"
+    android:tag="3"
+    android:text="@string/three"
+    app:layout_constraintBottom_toBottomOf="@+id/txt_one"
+    app:layout_constraintHorizontal_weight="1"
+    app:layout_constraintLeft_toRightOf="@+id/txt_two"
+    app:layout_constraintRight_toLeftOf="@+id/txt_plus"/>
+
+  <TextView
+    android:id="@+id/txt_plus"
+    style="@style/CalcButton"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:background="@color/lightOrange"
+    android:text="@string/plus"
+    android:textColor="@color/colorWhite"
+    app:layout_constraintBottom_toBottomOf="@+id/txt_one"
+    app:layout_constraintHorizontal_weight="1"
+    app:layout_constraintLeft_toRightOf="@+id/txt_three"
+    app:layout_constraintRight_toRightOf="parent" />
+
+  <TextView
+    android:id="@+id/txt_four"
+    style="@style/CalcButton"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="0dp"
+    android:background="@color/lightGrey"
+    android:onClick="onClick"
+    android:tag="4"
+    android:text="@string/four"
+    app:layout_constraintBottom_toTopOf="@+id/txt_one"
+    app:layout_constraintHorizontal_chainStyle="spread_inside"
+    app:layout_constraintHorizontal_weight="1"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toLeftOf="@+id/txt_five"/>
+
+  <TextView
+    android:id="@+id/txt_five"
+    style="@style/CalcButton"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:background="@color/lightGrey"
+    android:onClick="onClick"
+    android:tag="5"
+    android:text="@string/five"
+    app:layout_constraintBottom_toBottomOf="@+id/txt_four"
+    app:layout_constraintHorizontal_weight="1"
+    app:layout_constraintLeft_toRightOf="@+id/txt_four"
+    app:layout_constraintRight_toLeftOf="@+id/txt_six"/>
+
+  <TextView
+    android:id="@+id/txt_six"
+    style="@style/CalcButton"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:background="@color/lightGrey"
+    android:onClick="onClick"
+    android:tag="6"
+    android:text="@string/six"
+    app:layout_constraintBottom_toBottomOf="@+id/txt_four"
+    app:layout_constraintHorizontal_weight="1"
+    app:layout_constraintLeft_toRightOf="@+id/txt_five"
+    app:layout_constraintRight_toLeftOf="@+id/txt_minus"/>
+
+  <TextView
+    android:id="@+id/txt_minus"
+    style="@style/CalcButton"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:background="@color/lightOrange"
+    android:text="@string/minus"
+    android:textColor="@color/colorWhite"
+    app:layout_constraintBottom_toBottomOf="@+id/txt_four"
+    app:layout_constraintHorizontal_weight="1"
+    app:layout_constraintLeft_toRightOf="@+id/txt_six"
+    app:layout_constraintRight_toRightOf="parent" />
+
+  <TextView
+    android:id="@+id/txt_seven"
+    style="@style/CalcButton"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:background="@color/lightGrey"
+    android:onClick="onClick"
+    android:tag="7"
+    android:text="@string/seven"
+    app:layout_constraintBottom_toTopOf="@+id/txt_four"
+    app:layout_constraintHorizontal_chainStyle="spread_inside"
+    app:layout_constraintHorizontal_weight="1"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toLeftOf="@+id/txt_eight"/>
+
+  <TextView
+    android:id="@+id/txt_eight"
+    style="@style/CalcButton"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:background="@color/lightGrey"
+    android:onClick="onClick"
+    android:tag="8"
+    android:text="@string/eight"
+    app:layout_constraintBottom_toBottomOf="@+id/txt_seven"
+    app:layout_constraintHorizontal_weight="1"
+    app:layout_constraintLeft_toRightOf="@+id/txt_seven"
+    app:layout_constraintRight_toLeftOf="@+id/txt_nine"/>
+
+  <TextView
+    android:id="@+id/txt_nine"
+    style="@style/CalcButton"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="0dp"
+    android:background="@color/lightGrey"
+    android:onClick="onClick"
+    android:tag="9"
+    android:text="@string/nine"
+    app:layout_constraintBottom_toBottomOf="@+id/txt_seven"
+    app:layout_constraintHorizontal_weight="1"
+    app:layout_constraintLeft_toRightOf="@+id/txt_eight"
+    app:layout_constraintRight_toLeftOf="@+id/txt_multiplier"/>
+
+  <TextView
+    android:id="@+id/txt_multiplier"
+    style="@style/CalcButton"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:background="@color/lightOrange"
+    android:text="@string/multiplier"
+    android:textColor="@color/colorWhite"
+    app:layout_constraintBottom_toBottomOf="@+id/txt_seven"
+    app:layout_constraintHorizontal_weight="1"
+    app:layout_constraintLeft_toRightOf="@+id/txt_nine"
+    app:layout_constraintRight_toRightOf="parent" />
+
+  <TextView
+    android:id="@+id/txt_ce"
+    style="@style/CalcButton"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:background="@color/medianGrey"
+    android:text="@string/CE"
+    app:layout_constraintBottom_toTopOf="@+id/txt_seven"
+    app:layout_constraintHorizontal_chainStyle="spread_inside"
+    app:layout_constraintHorizontal_weight="1"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toLeftOf="@+id/txt_clear" />
+
+  <TextView
+    android:id="@+id/txt_clear"
+    style="@style/CalcButton"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:background="@color/medianGrey"
+    android:text="@string/clear"
+    app:layout_constraintBottom_toBottomOf="@+id/txt_ce"
+    app:layout_constraintHorizontal_weight="1"
+    app:layout_constraintLeft_toRightOf="@+id/txt_ce"
+    app:layout_constraintRight_toLeftOf="@+id/txt_delete" />
+
+  <TextView
+    android:id="@+id/txt_delete"
+    style="@style/CalcButton"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:background="@color/medianGrey"
+    android:text="@string/delete"
+    app:layout_constraintBottom_toBottomOf="@+id/txt_ce"
+    app:layout_constraintHorizontal_weight="1"
+    app:layout_constraintLeft_toRightOf="@+id/txt_clear"
+    app:layout_constraintRight_toLeftOf="@+id/txt_devide" />
+
+  <TextView
+    android:id="@+id/txt_devide"
+    style="@style/CalcButton"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:background="@color/lightOrange"
+    android:text="@string/devide"
+    android:textColor="@color/colorWhite"
+    app:layout_constraintBottom_toBottomOf="@+id/txt_ce"
+    app:layout_constraintHorizontal_weight="1"
+    app:layout_constraintLeft_toRightOf="@+id/txt_delete"
+    app:layout_constraintRight_toRightOf="parent" />
+
+  <TextView
+    android:id="@+id/txt_remainder"
+    style="@style/CalcButton"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:background="@color/darkGrey"
+    android:text="@string/remainder"
+    app:layout_constraintBottom_toTopOf="@+id/txt_ce"
+    app:layout_constraintHorizontal_chainStyle="spread_inside"
+    app:layout_constraintHorizontal_weight="1"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toLeftOf="@+id/txt_power" />
+
+  <TextView
+    android:id="@+id/txt_power"
+    style="@style/CalcButton"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:background="@color/darkGrey"
+    android:text="@string/power"
+    app:layout_constraintBottom_toBottomOf="@+id/txt_remainder"
+    app:layout_constraintHorizontal_weight="1"
+    app:layout_constraintLeft_toRightOf="@+id/txt_remainder"
+    app:layout_constraintRight_toLeftOf="@+id/textView23" />
+
+  <TextView
+    android:id="@+id/textView23"
+    style="@style/CalcButton"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:background="@color/darkGrey"
+    android:text="@string/power2"
+    app:layout_constraintBottom_toBottomOf="@+id/txt_remainder"
+    app:layout_constraintHorizontal_weight="1"
+    app:layout_constraintLeft_toRightOf="@+id/txt_power"
+    app:layout_constraintRight_toLeftOf="@+id/txt_ceremony" />
+
+  <TextView
+    android:id="@+id/txt_ceremony"
+    style="@style/CalcButton"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:background="@color/darkGrey"
+    android:text="@string/ceremory"
+    app:layout_constraintBottom_toBottomOf="@+id/txt_remainder"
+    app:layout_constraintHorizontal_weight="1"
+    app:layout_constraintLeft_toRightOf="@+id/textView23"
+    app:layout_constraintRight_toRightOf="parent"
+    android:layout_marginBottom="-21dp" />
+
+  <TextView
+    android:id="@+id/textView25"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="24dp"
+    android:layout_marginRight="24dp"
+    android:gravity="center_vertical"
+    android:maxLines="1"
+    android:textColor="@color/lightGrey"
+    android:textSize="20sp"
+    app:layout_constraintBottom_toTopOf="@+id/textView26"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+  <TextView
+    android:id="@+id/textView26"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="24dp"
+    android:layout_marginRight="24dp"
+    android:text="0"
+    android:textColor="@color/colorWhite"
+    android:textSize="40sp"
+    app:layout_constraintBottom_toTopOf="@+id/txt_ceremony"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textView25"/>
+
+</android.support.constraint.ConstraintLayout>
