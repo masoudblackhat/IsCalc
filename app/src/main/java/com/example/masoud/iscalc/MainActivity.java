@@ -243,6 +243,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+
     private class onEqualClick implements View.OnClickListener {
         @Override
         public void onClick(View v) {
