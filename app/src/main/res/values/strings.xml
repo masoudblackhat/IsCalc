@@ -15,13 +15,14 @@
   <string name="minus">-</string>
   <string name="multiplier">*</string>
   <string name="devide">/</string>
-  <string name="ceremory">~</string>
-  <string name="power">^</string>
-  <string name="power2">^</string>
+  <string name="ceremory">1⁄x</string>
+  <string name="power">x^2</string>
+  <string name="sqrt">√</string>
   <string name="dot">.</string>
   <string name="delete">DEL</string>
   <string name="clear">C</string>
   <string name="CE">CE</string>
   <string name="equal">=</string>
   <string name="remainder">%</string>
+  <string name="result"></string>
 </resources>
